@@ -1,0 +1,9 @@
+﻿@{
+    var result = ViewData["ViewResult"] as ValueTuple<int, string>?;
+    if (result != null)
+    {
+        <div class="alert @(result.Value.Item1 == 0 ? "alert-success" : "alert-danger")">
+            @result.Value.Item2
+        </div>
+    }
+}

@@ -1,0 +1,19 @@
+﻿@model Yongqing.ViewModels.BooksViewModel
+@{
+    ViewData["Title"] = "書籍詳細";
+}
+@await Html.PartialAsync("_ViewResult")
+
+<h2>@ViewData["Title"]</h2>
+<dl class="row">
+    <dt class="col-sm-2">書名</dt>
+    <dd class="col-sm-10">@Model.Title</dd>
+    <dt class="col-sm-2">作者</dt>
+    <dd class="col-sm-10">@Model.Author</dd>
+    <dt class="col-sm-2">出版日</dt>
+    <dd class="col-sm-10">@Model.PublishDate?.ToString("yyyy-MM-dd")</dd>
+    <dt class="col-sm-2">價格</dt>
+    <dd class="col-sm-10">@Model.Price?.ToString("C")</dd>
+</dl>
+<br />
+<a asp-action="Index" class="btn btn-secondary">返回</a>
