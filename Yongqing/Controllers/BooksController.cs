@@ -206,7 +206,7 @@ public class BooksController : Controller
         }
         finally
         {
-            HttpContext.Session.SetString("EditId", JsonSerializer.Serialize(string.Empty));
+            HttpContext.Session.SetString("EditId", string.Empty);
         }
     }
 
