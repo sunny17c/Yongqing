@@ -7,7 +7,6 @@ using Yongqing.Databases.Test;
 namespace WebApplication1.Repositorys;
 public class BooksRepository : IBooksRepository
 {
-    private readonly bool _isTest = true;
     private readonly YongqingContext _context;
 
     public BooksRepository(YongqingContext context)
